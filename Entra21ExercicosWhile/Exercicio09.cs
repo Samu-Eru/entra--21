@@ -10,7 +10,7 @@ namespace Entra21ExercicosWhile
     {
         public void Executar()
         {
-            Console.WriteLine("djfhksdhjfkdhsfkjdhsfkjdhsfjkhdsfkjhdsf");
+            Console.WriteLine(" a laranja é amarela!!");
 
 
         }
