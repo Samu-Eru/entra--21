@@ -10,8 +10,20 @@ namespace Entra21ExercicosWhile
     {
         public void Executar()
         {
-            Console.WriteLine(" a laranja é amarela!!");
+            Console.Write("Fatorial do número: ");
+            int numeroFatorial = Convert.ToInt32(Console.ReadLine());
+            int multiplicador = numeroFatorial-1;
+            
+            while (multiplicador != 0)
+            {
+                int resultado = 0;
+                resultado = (numeroFatorial * multiplicador) ;
+                int resultadoFinal = (numeroFatorial * multiplicador);
+                //int resultadoAnterior = resultado;
 
+                multiplicador = multiplicador - 1;
+                Console.WriteLine("Fatorial de " + numeroFatorial + " é: " + resultadoFinal );
+            }
 
         }
     }
