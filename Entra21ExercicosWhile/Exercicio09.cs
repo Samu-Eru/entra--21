@@ -12,17 +12,19 @@ namespace Entra21ExercicosWhile
         {
             Console.Write("Fatorial do número: ");
             int numeroFatorial = Convert.ToInt32(Console.ReadLine());
-            int multiplicador = numeroFatorial-1;
-            
-            while (multiplicador != 0)
+            int multiplicador = 1;
+            int resultado = 0;
+            while (multiplicador != numeroFatorial)
             {
-                int resultado = 0;
-                resultado = (numeroFatorial * multiplicador) ;
-                int resultadoFinal = (numeroFatorial * multiplicador);
-                //int resultadoAnterior = resultado;
-
-                multiplicador = multiplicador - 1;
-                Console.WriteLine("Fatorial de " + numeroFatorial + " é: " + resultadoFinal );
+                if (resultado == 0)
+                {
+                    resultado = numeroFatorial * multiplicador;
+                    Console.WriteLine("Fatorial do número: " + numeroFatorial + " X " + multiplicador + " = " + resultado);
+                    multiplicador = multiplicador + 1;
+                }
+                resultado = resultado * multiplicador;
+                Console.WriteLine("Fatorial do número: " + numeroFatorial+" X "+ multiplicador+" = " + resultado);
+                multiplicador = multiplicador + 1;
             }
 
         }
