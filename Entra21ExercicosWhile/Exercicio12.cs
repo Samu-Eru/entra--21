@@ -13,16 +13,22 @@ namespace Entra21ExercicosWhile
             int totalPedidos = 0;
             double valorTotal = 0;
             int codigoProduto = 0;
+            int quantidadeBolos = 0;
+            int quantidadeSanduiches = 0;
+            int quantidadePizza = 0;
+
+
             while (codigoProduto != 7)
             {
-                Console.WriteLine("Cód   |   Tipo   |    Nome   |    Valor");
-                Console.WriteLine("1 | Bolos | Bolo Brigadeiro | R$ 29,50");
-                Console.WriteLine("2 | Bolos | Leite com nutella | R$ 29,23,");
-                Console.WriteLine("3 | Sanduiches | Provolone com salame | R$ 19,70");
-                Console.WriteLine("4 | Sanduiches | Só salame | R$ 12,70");
-                Console.WriteLine("5 | Pizzas | Calabresa | R$ 9,98");
-                Console.WriteLine("6 | Pizzas | Vento | R$ 16,78");
-                Console.WriteLine("7 : SAIR");
+                Console.WriteLine(@"Cód   |   Tipo   |    Nome   |    Valor
+                1 | Bolos | Bolo Brigadeiro | R$ 29,50
+                2 | Bolos | Leite com nutella | R$ 29,23,
+                3 | Sanduiches | Provolone com salame | R$ 19,70
+                4 | Sanduiches | Só salame | R$ 12,70
+                5 | Pizzas | Calabresa | R$ 9,98
+                6 | Pizzas | Vento | R$ 16,78
+                7 : SAIR");
+
                 codigoProduto = Convert.ToInt32(Console.ReadLine());
 
                 if(codigoProduto == 1)
@@ -55,10 +61,31 @@ namespace Entra21ExercicosWhile
                 {
                     Console.WriteLine("Opção inválida");
                 }
+                
+
+                if (codigoProduto == 1 | codigoProduto == 2)
+                    {
+                    quantidadeBolos = quantidadeBolos + 1;
+                }
+                else if(codigoProduto == 3 | codigoProduto == 4)
+                {
+                    quantidadeSanduiches = quantidadeSanduiches + 1;
+                }
+                else if(codigoProduto == 5 | codigoProduto == 6)
+                {
+                    quantidadePizza = quantidadePizza + 1;
+                }
+
                 Console.Clear();
             }
+
             Console.WriteLine("Total de pedidos: " + totalPedidos);
             Console.WriteLine("Valor total: " + valorTotal);
+            Console.WriteLine("Quantidade de Bolos escolhidos: " + quantidadeBolos);
+            Console.WriteLine("Quantidade de Sanduiches escolhidos: " + quantidadeSanduiches);
+            Console.WriteLine("Quantidade de Pizzas escolhidos: " + quantidadePizza);
+            Console.WriteLine("Média : " + (valorTotal / totalPedidos));
+
         }
 
     }
