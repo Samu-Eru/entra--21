@@ -14,14 +14,25 @@ namespace Entra21ExercicosWhile
             int numeroFatorial = Convert.ToInt32(Console.ReadLine());
             int multiplicador = 1;
             int resultado = 0;
+
+            if (numeroFatorial == 0)
+            {
+                Console.WriteLine("Fatorial de 0: 1");
+                multiplicador = numeroFatorial;
+            }
+
             while (multiplicador != numeroFatorial)
             {
+               
                 if (resultado == 0)
                 {
                     resultado = numeroFatorial * multiplicador;
+
                     Console.WriteLine("Fatorial do número: " + numeroFatorial + " X " + multiplicador + " = " + resultado);
+
                     multiplicador = multiplicador + 1;
                 }
+
                 resultado = resultado * multiplicador;
                 Console.WriteLine("Fatorial do número: " + numeroFatorial+" X "+ multiplicador+" = " + resultado);
                 multiplicador = multiplicador + 1;
