@@ -59,3 +59,8 @@ else if (opcaoDesejada == 9)
     Exercicio09 Exercicio09 = new Exercicio09();
     Exercicio09.Executar();
 }
+else if (opcaoDesejada == 10)
+        {
+    Exercicio10 Exercicio10 = new Exercicio10();
+    Exercicio10.Executar();
+}
