@@ -13,17 +13,23 @@ namespace Entra21ExercicosWhile
             int hora = 23;
             int minuto = 59;
             int segundo = 59;
-            
-            while(hora <= 23)
+   
+            while (hora >=0)
             {
-                while(minuto<=23)
+                while(minuto>=0)
                 {
-                    while(segundo<=59)
+                    while(segundo>=0)
                     {
-                        segundo = segundo - 1;
 
+                        Console.WriteLine(hora+":"+minuto+":"+segundo);
+                        segundo = segundo - 1;
                     }
+                    minuto = minuto - 1;
+                    segundo = 59;
                 }
+                hora = hora - 1;
+                minuto = 59;
+               
             }
             
         }
