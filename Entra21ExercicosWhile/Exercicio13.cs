@@ -12,11 +12,15 @@ namespace Entra21ExercicosWhile
         {
             Console.WriteLine(@"-----------------------Estatistica de Jogadores-----------------------");
 
-            int quantidadeCaracteresNome = 0;
+            int caracteresMaiorNome = 0;
+            int caracteresMenorNome = 10000;
+            string maiorNome = "";
+            string menorNome = "";
             int maiorIdade = 0;
             double menorPeso = 1000;
             double maiorAltura = 0;
-            string sexo = "";
+            int quantidadeMasculino = 0;
+            int quantidadeFeminino = 0;
             int maisGolsMarcados = 0;
             int maisCartoesVermelhos = 0;
             int maisCartoesAmarelos = 0;
@@ -26,13 +30,13 @@ namespace Entra21ExercicosWhile
             {
                 Console.Write("Nome: ");
                 string nome = Console.ReadLine().Trim();
-                quantidadeCaracteresNome = nome.Length;
+                int tamanhoNome = nome.Length;
                 Console.Write("idade: ");
                 int idade = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Peso: ");
                 double peso = Convert.ToDouble(Console.ReadLine());
                 Console.Write("Sexo: (M/F) ");
-                sexo = Console.ReadLine();
+                string sexo = Console.ReadLine().ToUpper();
                 Console.Write("Altura: ");
                 double altura = Convert.ToDouble(Console.ReadLine());
                 Console.Write("Quantidade de gols marcados :");
@@ -42,19 +46,51 @@ namespace Entra21ExercicosWhile
                 Console.Write("Quantidade de cartôes vermelhos recebidos: ");
                 int cartoesVermelhos = Convert.ToInt32(Console.ReadLine());
 
-                
 
 
-              if (peso <menorPeso)
+                //Descobrir Menor peso
+                if (peso < menorPeso)
                 {
                     menorPeso = peso;
                 }
-              if(altura>maiorAltura)
+
+
+                //Descobrir Maior altura
+                if (altura > maiorAltura)
                 {
                     maiorAltura = altura;
                 }
-              if(quantidadecaracteresNome > )
 
+                
+                //Descobrir Maior
+                if (tamanhoNome > caracteresMaiorNome)
+                {
+                    maiorNome = nome;
+                    caracteresMaiorNome = maiorNome.Length;
+                }
+                //Menor nome 
+                if (tamanhoNome < caracteresMenorNome)
+                {
+                    menorNome = nome;
+                    caracteresMenorNome = nome.Length;
+                 }
+                
+
+
+
+                //Descobrir quantidade masculino e quantidade feminino
+                if (sexo == "M")
+                {
+                    quantidadeMasculino = quantidadeMasculino + 1;
+                }
+                else if (sexo == "F")
+                {
+                    quantidadeFeminino = quantidadeFeminino + 1;
+                }
+                else
+                {
+                    Console.WriteLine("Inválido!!!!!");
+                }
 
 
 
@@ -62,7 +98,13 @@ namespace Entra21ExercicosWhile
 
                 jogadores = jogadores + 1;
             }
-            Console.WriteLine("Maior peso: " + menorPeso);
+            Console.WriteLine("Menor peso: " + menorPeso);
+            Console.WriteLine("Maior Altura: " + maiorAltura);
+            Console.WriteLine("Maior nome: " + maiorNome);
+            Console.WriteLine("Menor nome: " + menorNome);
+            Console.WriteLine("Maior altura: " + maiorAltura);
+            Console.WriteLine("Quantidade de Masculinos: " + quantidadeMasculino);
+            Console.WriteLine("Quantidade de Feminino: " + quantidadeFeminino);
         }
     }
 }
