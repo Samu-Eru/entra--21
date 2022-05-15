@@ -80,7 +80,7 @@ namespace ExerciciosForTryCatch
             Console.WriteLine("Média valor dos carros cadastrados: " + mediaValor / quantidadeDeCadastros);
             Console.WriteLine("Média de modelos que iniciam com a letra G: " + quantidadeComG);
             Console.WriteLine("Média de modelos que iniciam com a letra A: " + quantidadeComA);
-
+            Console.WriteLine("---------------------------------------------------------------------------");
         }
     }
 }

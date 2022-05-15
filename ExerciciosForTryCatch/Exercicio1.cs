@@ -36,6 +36,7 @@ namespace ExerciciosForTryCatch
                     {
                         Console.WriteLine("Valor digitado inválido!");
                     }
+                    Console.WriteLine("---------------------------------------------------------------------------");
                 }
             }
         }
