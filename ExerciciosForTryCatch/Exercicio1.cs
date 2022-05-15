@@ -10,21 +10,23 @@ namespace ExerciciosForTryCatch
     {
         public void Executar()
         {
+
+                Console.Clear();
+
             for (var i = 0; i < 5; i++)
             {
-
                 var numeroValido = false;
 
                 while (numeroValido == false)
                 {
-                    
+
 
 
                     try
                     {
 
-                       Console.Write("Digite o nome da peça: ");
-                       var nome = Console.ReadLine();
+                        Console.Write("Digite o nome da " + i + " peça: ");
+                        var nome = Console.ReadLine();
 
                         Console.WriteLine("Digite o preço da " + i + "° peça: ");
                         var preco = Convert.ToInt32(Console.ReadLine());
