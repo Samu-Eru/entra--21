@@ -7,7 +7,8 @@ while (opcaoValida == false)
     {
         Console.WriteLine(@"1 - Exercicio 1
 2 - Exercicio 5
-3 - EXercicio 8
+3 - Exercicio 8
+4 - Exercicio 10
 99 - SAIR
 ");
         var escolha = Convert.ToInt32(Console.ReadLine());
@@ -26,6 +27,11 @@ while (opcaoValida == false)
         {
             Exercicio8 Exercicio8 = new Exercicio8();
             Exercicio8.Executar();
+        }
+        else if(escolha == 4)
+        {
+            Exercicio10 Exercicio10 = new Exercicio10();
+            Exercicio10.Executar();
         }
         else if (escolha == 99)
         {
