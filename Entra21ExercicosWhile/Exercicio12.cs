@@ -17,19 +17,19 @@ namespace Entra21ExercicosWhile
             int quantidadeSanduiches = 0;
             int quantidadePizza = 0;
 
+Console.WriteLine(@"Cód   |   Tipo   |    Nome   |    Valor
+1 | Bolos | Bolo Brigadeiro | R$ 29,50
+2 | Bolos | Leite com nutella | R$ 29,23,
+3 | Sanduiches | Provolone com salame | R$ 19,70
+4 | Sanduiches | Só salame | R$ 12,70
+5 | Pizzas | Calabresa | R$ 9,98
+6 | Pizzas | Vento | R$ 16,78
+7 : SAIR");
+
+                codigoProduto = Convert.ToInt32(Console.ReadLine());
 
             while (codigoProduto != 7)
             {
-                Console.WriteLine(@"Cód   |   Tipo   |    Nome   |    Valor
-                1 | Bolos | Bolo Brigadeiro | R$ 29,50
-                2 | Bolos | Leite com nutella | R$ 29,23,
-                3 | Sanduiches | Provolone com salame | R$ 19,70
-                4 | Sanduiches | Só salame | R$ 12,70
-                5 | Pizzas | Calabresa | R$ 9,98
-                6 | Pizzas | Vento | R$ 16,78
-                7 : SAIR");
-
-                codigoProduto = Convert.ToInt32(Console.ReadLine());
 
                 if(codigoProduto == 1)
                 {
