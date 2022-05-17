@@ -10,6 +10,7 @@ while (opcaoValida == false)
 3 - Exercicio 8
 4 - Exercicio 10
 5 - Exercicio 12
+6 - Exercicico 13
 99 - SAIR
 ");
         var escolha = Convert.ToInt32(Console.ReadLine());
@@ -43,6 +44,13 @@ while (opcaoValida == false)
         {
             opcaoValida = true;
         }
+        else if(escolha == 6)
+        {
+            Exercicio13 Exercicio13 = new Exercicio13();
+            Exercicio13.Executar();
+        }
+
+
         else
         {
             Console.WriteLine("Opcão inválida!");
