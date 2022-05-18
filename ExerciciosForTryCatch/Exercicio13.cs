@@ -27,6 +27,7 @@ namespace ExerciciosForTryCatch
             var nomeJogadorMaisAmarelos = "";
             var menorCartoesVermelhos = 9999;
             var nomeJogadormenosVermelhos = "";
+
             for (var i = 0; i < 22; i++)
             {
                 Console.Write("Nome: ");

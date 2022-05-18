@@ -93,8 +93,12 @@ namespace ExerciciosForTryCatch
 
                             digitoValido = true;
                         }
-                        else
+                        else if(codigoProdutoDesejado == 7)
                         {
+                            digitoValido = true;
+                            i = quantidadeProdutos;
+                        }
+                        else{
                             Console.WriteLine("Opção não disponível!!");
                         }
                     }
