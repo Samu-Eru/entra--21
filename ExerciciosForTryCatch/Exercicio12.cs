@@ -32,7 +32,7 @@ namespace ExerciciosForTryCatch
                 try
                 {
                     Console.WriteLine("Digite a QUANTIDADE de produtos desejados: ");
-                    quantidadeProdutos = Convert.ToInt32(Console.ReadLine());
+                    quantidadeProdutos = Convert.ToInt32(Console.ReadLine().Trim());
                     digitoValido = true;
                 }
                 catch(Exception ex)
@@ -40,6 +40,7 @@ namespace ExerciciosForTryCatch
                     Console.WriteLine("Valor inválido!");
                 }
             }
+
             for (var i = 0; i < quantidadeProdutos; i++)
             {
                 digitoValido = false;

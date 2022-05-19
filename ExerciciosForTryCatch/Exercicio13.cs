@@ -10,69 +10,180 @@ namespace ExerciciosForTryCatch
     {
         public void Executar()
         {
-            var menorPeso = 99999.0;
-            var maiorPeso = 0.0;
-            var maiorAltura = 0.0;
+            var nome = "";
+            var tamanhoNome = 0;
+            var idade = 0;
+            var peso = 0.0;
+            var altura = 0.0;
+            var cartoesAmarelos = 0;
+            var cartoesVermelhos = 0;
+
+
+            var menorPeso = double.MaxValue;
+            var maiorPeso = double.MinValue;
+            var maiorAltura = double.MinValue;
             var maiorNome = 0;
             var nomeMaiorNome = "";
-            var menorNome = 9999;
+            var menorNome = int.MaxValue;
             var nomeMenorNome = "";
             var quantidadeMasculino = 0;
             var quantidadeFeminino = 0;
-            var menosCartoesAmarelos = 9999;
+            var menosCartoesAmarelos = int.MaxValue;
             var nomeJogadorMenosAmarelos = "";
             var maiorCartoesVermelho = 0;
             var nomeJogadorMaisVermelho = "";
             var maiorCartoesAmarelos = 0;
             var nomeJogadorMaisAmarelos = "";
-            var menorCartoesVermelhos = 9999;
+            var menorCartoesVermelhos = int.MaxValue;
             var nomeJogadormenosVermelhos = "";
 
-            for (var i = 0; i < 22; i++)
+            for (var i = 0; i < 2; i++)
             {
-                Console.Write("Nome: ");
-                var nome = Console.ReadLine().Trim();
-                var tamanhoNome = nome.Length;
-                Console.Write("idade: ");
-                var idade = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Peso: ");
-                var peso = Convert.ToDouble(Console.ReadLine());
+                var nomeValido = false;
+                while (nomeValido == false)
+                {
+                    try
+                    {
+                        Console.Write("Nome: ");
+                        nome = Console.ReadLine().Trim();
+                        tamanhoNome = nome.Length;
 
+                        if (tamanhoNome <3)
+                        {
+                            Console.WriteLine("Nome inválido");
+                        }
+                        else
+                        {
+                            nomeValido = true;
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("INVÁLIDO!!!!!!!");
+                    }
+                }
+
+                var idadeValida = false;
+                while (idadeValida == false)
+                {
+                    try
+                    {
+                        Console.Write("idade: ");
+                        idade = Convert.ToInt32(Console.ReadLine());
+                        idadeValida = true;
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Valor inválido!");
+                    }
+                }
+
+                var pesoValido = false;
+                while (pesoValido == false)
+                {
+                    try
+                    {
+                        Console.WriteLine("Peso: ");
+                        peso = Convert.ToDouble(Console.ReadLine());
+                        pesoValido = true;
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Valor inválido!");
+                    }
+                }
 
 
                 var sexoValido = false;
                 while (sexoValido == false)
                 {
-                    Console.Write("Sexo: (M/F) ");
-                    var sexo = Console.ReadLine().ToUpper();
+                    try
+                    {
+                        Console.Write("Sexo: (M/F) ");
+                        var sexo = Console.ReadLine().ToUpper();
 
-                    if (sexo == "M")
-                    {
-                        quantidadeMasculino += 1;
-                        sexoValido = true;
+                        if (sexo == "M")
+                        {
+                            quantidadeMasculino += 1;
+                            sexoValido = true;
+                        }
+                        else if (sexo == "F")
+                        {
+                            quantidadeFeminino += 1;
+                            sexoValido = true;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Opção inválida!");
+                        }
                     }
-                    else if (sexo == "F")
+                    catch (Exception ex)
                     {
-                        quantidadeFeminino += 1;
-                        sexoValido = true;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Opção inválida!");
+                        Console.WriteLine("Valor inválido");
                     }
                 }
 
+                var alturaValida = false;
+                while (alturaValida == false) 
+                {
+                    try
+                    {
 
+                        Console.Write("Altura: ");
+                        altura = Convert.ToDouble(Console.ReadLine());
+                        alturaValida = true;
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Valor inválido");
+                    }
+                }
 
-                Console.Write("Altura: ");
-                var altura = Convert.ToDouble(Console.ReadLine());
-                Console.Write("Quantidade de gols marcados :");
-                var golsMarcados = Convert.ToInt32(Console.ReadLine());
-                Console.Write("Quantidade de cartões amarelos recebidos: ");
-                var cartoesAmarelos = Convert.ToInt32(Console.ReadLine());
-                Console.Write("Quantidade de cartôes vermelhos recebidos: ");
-                var cartoesVermelhos = Convert.ToInt32(Console.ReadLine());
+                var quantidadeGolsValidos = false;
+                while (quantidadeGolsValidos == false)
+                {
+                    try
+                    {
+                        Console.Write("Quantidade de gols marcados :");
+                        var golsMarcados = Convert.ToInt32(Console.ReadLine());
+                        quantidadeGolsValidos = true;
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Valor inválido!");
+                    }
+                }
 
+                var amarelosRecebidosValidos = false;
+                while (amarelosRecebidosValidos == false)
+                {
+                    try
+                    {
+                        Console.Write("Quantidade de cartões amarelos recebidos: ");
+                        cartoesAmarelos = Convert.ToInt32(Console.ReadLine());
+                        amarelosRecebidosValidos = true;
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Valor inválido!");
+                    }
+                }
+
+                var vermelhosRecebidosValidos = false;
+                while (vermelhosRecebidosValidos == false)
+                {
+                    try
+                    {
+                        Console.Write("Quantidade de cartôes vermelhos recebidos: ");
+                        cartoesVermelhos = Convert.ToInt32(Console.ReadLine());
+                        vermelhosRecebidosValidos = true;
+                    }
+                    catch(Exception ex)
+                    {
+                        Console.WriteLine("Valor inválido");
+                    }
+                }
                 if (peso < menorPeso)
                 {
                     menorPeso = peso;
@@ -84,6 +195,7 @@ namespace ExerciciosForTryCatch
                 if (tamanhoNome > maiorNome)
                 {
                     nomeMaiorNome = nome;
+                    maiorNome = tamanhoNome;
                 }
                 if (cartoesAmarelos < menosCartoesAmarelos)
                 {
@@ -93,6 +205,7 @@ namespace ExerciciosForTryCatch
                 if (tamanhoNome < menorNome)
                 {
                     nomeMenorNome = nome;
+                    menorNome = tamanhoNome;
                 }
                 if (peso > maiorPeso)
                 {
@@ -101,21 +214,33 @@ namespace ExerciciosForTryCatch
                 if (cartoesVermelhos > maiorCartoesVermelho)
                 {
                     maiorCartoesVermelho = cartoesVermelhos;
-                    nomeJogadorMaisVermelho = nome;                
+                    nomeJogadorMaisVermelho = nome;
                 }
-                if(cartoesAmarelos>maiorCartoesAmarelos)
+                if (cartoesAmarelos>maiorCartoesAmarelos)
                 {
                     maiorCartoesAmarelos = cartoesAmarelos;
                     nomeJogadorMaisAmarelos = nome;
                 }
-                if(cartoesVermelhos<menorCartoesVermelhos)
+                if (cartoesVermelhos<menorCartoesVermelhos)
                 {
                     menorCartoesVermelhos = cartoesVermelhos;
                     nomeJogadormenosVermelhos = nome;
                 }
 
             }
-            Console.WriteLine(@"");
+            Console.WriteLine("------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("Jogador com o menor peso: "+menorPeso);
+            Console.WriteLine("Jogador com a maior altura: "+maiorAltura);
+            Console.WriteLine("Jogador com o maior nome: "+nomeMaiorNome +","+ maiorNome+" caracteres");
+            Console.WriteLine("Quantidade de jogadores do sexo feminino: "+quantidadeFeminino);
+            Console.WriteLine("Quantidade de jogadores do sexo masculino: "+quantidadeMasculino);
+            Console.WriteLine("Jogador com a menor quantidade de cartões amarelos recebidos: "+nomeJogadorMenosAmarelos+", quantidade de amarelos: "+menosCartoesAmarelos);
+            Console.WriteLine("Jogador com o menor nome:  "+nomeMenorNome+","+menorNome+" caracteres");
+            Console.WriteLine("Jogador com o maior peso: "+maiorPeso);
+            Console.WriteLine("Jogador com a maior quantidade de cartôes vermelhos recebidos: "+nomeJogadorMaisVermelho+","+maiorCartoesVermelho+" vermelhos");
+            Console.WriteLine("Jogador com a maior quantidade de cartôes amarelos recebidos: "+nomeJogadorMenosAmarelos+","+maiorCartoesAmarelos+" amarelos");
+            Console.WriteLine("Jogador com a menor quantidade de cartões vermelhos recebidos: "+nomeJogadormenosVermelhos+","+menorCartoesVermelhos+"vermelhos");
+            Console.WriteLine("------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");        
         }
     }
 }
