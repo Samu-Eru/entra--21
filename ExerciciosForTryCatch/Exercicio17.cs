@@ -11,10 +11,9 @@ namespace ExerciciosForTryCatch
         public void Executar()
         {
             var data = new DateTime(2008, 3, 1, 23, 59, 59);
-            var hora = data.Hour;
-            
+          
 
-            for (; hora>=0;hora--)
+            for (var hora = data.Hour; hora>=0;hora--)
             {
                 for (var minuto=data.Minute; minuto>=0;minuto--)
                 {
