@@ -12,6 +12,7 @@ namespace ExerciciosVetores
         {
             double[] pesos = new double[5];
             double somaPesos = 0;
+
             for (var i = 0;i<pesos.Length;i++)
             {
                 Console.Write("Digite o [" + (i + 1) + "] peso: ");

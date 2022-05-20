@@ -13,19 +13,17 @@ namespace ExerciciosVetores
             double[] idades = new double[9];
             double maiorIdade = double.MinValue;
 
-            for (var i = 0;i<idades.Length;i++)
+            for (var i = 0; i < idades.Length; i++)
             {
                 Console.Write("Digite a [" + (i + 1) + "] idade: ");
                 idades[i] = Convert.ToDouble(Console.ReadLine());
-            }
 
-            for (var j = 0; j < idades.Length; j++)
-            {
-                if (idades[j] > maiorIdade)
+                if (idades[i] > maiorIdade)
                 {
-                    maiorIdade = idades[j];
+                    maiorIdade = idades[i];
                 }
             }
+
             Console.WriteLine("Maior idade: " + maiorIdade);
         }
     }
