@@ -10,7 +10,7 @@ namespace ExerciciosVetores
     {
         public void Executar()
         {
-            var numeros = new int[16];
+            int [] numeros = new int[16];
             int soma = 0;
             for (int i = 0; i <numeros.Length;i++)
             {
