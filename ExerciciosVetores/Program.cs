@@ -18,5 +18,6 @@ else if(escolha == 2)
 }
 else if(escolha == 3)
 {
-
+    Exercicio03 Exercicio03 = new Exercicio03();
+    Exercicio03.Executar();
 }
