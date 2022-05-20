@@ -14,7 +14,7 @@ namespace ExerciciosVetores
 
             for(var i =0;i<nomes.Length;i++)
             {
-                Console.Write("Digite o [" + (i + 1 )+"] nomes: ");
+                Console.Write("Digite o [" + (i + 1 )+"] nome: ");
                 nomes[i] = Console.ReadLine();
             }
 

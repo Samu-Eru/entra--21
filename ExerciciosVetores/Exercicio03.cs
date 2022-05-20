@@ -17,6 +17,7 @@ namespace ExerciciosVetores
             {
                 Console.Write("Digite o nome do [" + (i + 1) + "] Produto: ");
                 nomes[i] = Console.ReadLine();
+
                 Console.Write("Digite o preco do [" + (i + 1) + "] Produto: ");
                 precos[i] = Convert.ToDouble(Console.ReadLine());
             }

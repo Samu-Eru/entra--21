@@ -3,7 +3,8 @@
 Console.WriteLine(@"----------------MENU----------------
 1 - Exercicio 01
 2 - Exercicio 02
-3 - Exercicio 03");
+3 - Exercicio 03
+4 - Exercicio 04");
 int escolha = Convert.ToInt32(Console.ReadLine());
 
 if(escolha == 1)
@@ -20,4 +21,9 @@ else if(escolha == 3)
 {
     Exercicio03 Exercicio03 = new Exercicio03();
     Exercicio03.Executar();
+}
+else if(escolha == 4)
+{
+    Exercicio04 Exercicio04 = new Exercicio04();
+    Exercicio04.Executar();
 }
