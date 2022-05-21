@@ -7,7 +7,8 @@ Console.WriteLine(@"----------------MENU----------------
 4 - Exercicio 04
 5 - Exercicio 05
 6 - Exercicio 06
-7 - Exercicio 07");
+7 - Exercicio 07
+100 - Exemplo do Professor");
 
 var opcaoValida = false;
 while (opcaoValida == false)
@@ -55,6 +56,12 @@ while (opcaoValida == false)
         {
             Exercicio07 Exercicio07 = new Exercicio07();
             Exercicio07.Executar();
+            opcaoValida = true;
+        }
+        else if (escolha == 100)
+        {
+            ExemploDoProfessor Exemplo = new ExemploDoProfessor();
+            Exemplo.Executar();
             opcaoValida = true;
         }
         else
