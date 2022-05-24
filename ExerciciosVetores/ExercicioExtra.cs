@@ -51,7 +51,7 @@ namespace ExerciciosVetores
 
             for(int k=0;k<numerosInteiros.Length;k++)
             {
-                if()
+                
             }
         }
     }

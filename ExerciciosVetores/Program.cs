@@ -8,6 +8,7 @@ Console.WriteLine(@"----------------MENU----------------
 5 - Exercicio 05
 6 - Exercicio 06
 7 - Exercicio 07
+8 - Exercicio 02 Lista 02
 100 - Exemplo do Professor");
 
 var opcaoValida = false;
@@ -58,6 +59,18 @@ while (opcaoValida == false)
             Exercicio07.Executar();
             opcaoValida = true;
         }
+        else if(escolha == 8)
+        {
+            Exercicio01L02 exercicio01L02 = new Exercicio01L02();
+            exercicio01L02.Executar();
+            opcaoValida = true;
+        }
+        else if (escolha == 9)
+        {
+            Exercicio01L02 exercicio01L02 = new Exercicio02L02();
+            exercicio01L02.Executar();
+            opcaoValida = true;
+        }
         else if (escolha == 100)
         {
             ExemploDoProfessor Exemplo = new ExemploDoProfessor();
@@ -69,6 +82,7 @@ while (opcaoValida == false)
             Console.WriteLine("Opção inválida!");
             opcaoValida = false;
         }
+
     }
     catch(Exception ex)
     {
