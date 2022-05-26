@@ -67,8 +67,8 @@ while (opcaoValida == false)
         }
         else if (escolha == 9)
         {
-            Exercicio01L02 exercicio01L02 = new Exercicio02L02();
-            exercicio01L02.Executar();
+            Exercicio02L02 exercicio02L02 = new Exercicio02L02();
+            exercicio02L02.Executar();
             opcaoValida = true;
         }
         else if (escolha == 100)
