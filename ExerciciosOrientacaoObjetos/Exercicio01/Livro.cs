@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExerciciosOrientacaoObjetos
+namespace ExerciciosOrientacaoObjetos.Exercicio01
 {
     public class Livro
     {
@@ -12,7 +12,7 @@ namespace ExerciciosOrientacaoObjetos
         public string Autor;
         public string CódigoISBN;
         public string IdiomaOriginal;
-        public DateTime DataLançamento;
+        public DateTime DataLancamento;
         public int QuantidadePaginas;
         public int QuantidadePaginasLidas;
         public int QuantidadeReleituras;
@@ -36,6 +36,7 @@ namespace ExerciciosOrientacaoObjetos
             var vezesLidas = QuantidadeReleituras;
             return vezesLidas;
         }
+
         public int TotalPaginasLidas()
         {
 
@@ -43,14 +44,23 @@ namespace ExerciciosOrientacaoObjetos
             var vezesLidas = TotalVezesLidas();
             var quantidadePaginas = QuantidadePaginas;
 
-            if ((vezesLidas == 0) || (vezesLidas == 1))
+            if ((vezesLidas > 0))
             {
-                return paginasLidas;
-            }
-            else
-            {
+
                 return paginasLidas + (quantidadePaginas * vezesLidas);
             }
+            
+                return paginasLidas;
+        }
+    
+        public int CalcularQuantidadeAnosAposPublicacao()
+        {
+            var dataAtual = DateTime.Now;
+
+
+            var tempoPublicado = dataAtual.Year - DataLancamento.Year;
+
+            return tempoPublicado;
 
         }
     }

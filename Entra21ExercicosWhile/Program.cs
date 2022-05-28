@@ -20,8 +20,8 @@ int opcaoDesejada = Convert.ToInt32(Console.ReadLine());
 Console.Clear();
 if (opcaoDesejada == 1)
 {
-    Exercicio01 Exercicio01 = new Exercicio01();
-    Exercicio01.Executar();
+        Exercicio01 Exercicio01 = new Exercicio01();
+        Exercicio01.Executar();
 
 }
 else if (opcaoDesejada == 2)
