@@ -23,14 +23,15 @@ namespace ExerciciosOrientacaoObjetos.Exercicio01
             livro1.QuantidadeReleituras = Convert.ToInt32(Console.ReadLine());
             Console.Write("Digite a data de lançamento desse livro: ");
             livro1.DataLancamento = Convert.ToDateTime(Console.ReadLine());
-            
+
             Console.WriteLine("");
-            
+
             livro1.ApresentarTituloAutor();
-            Console.WriteLine(@$"Quantidade restantes de páginas para serem lidas: " + livro1.PaginasParaLer() +
-                "\nQuantidade páginas lidas no total: " + livro1.TotalPaginasLidas()+
-                "\nAnos após publicação: "+livro1.CalcularQuantidadeAnosAposPublicacao());
-                
+            Console.WriteLine(@$"
+                Quantidade restantes de páginas para serem lidas: {livro1.PaginasParaLer()}
+                \nQuantidade páginas lidas no total:    {livro1.TotalPaginasLidas()} 
+                \nAnos após publicação:                 { livro1.CalcularQuantidadeAnosAposPublicacao()}");
+
 
         }
     }
