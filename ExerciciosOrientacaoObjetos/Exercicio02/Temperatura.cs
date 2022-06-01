@@ -12,93 +12,77 @@ namespace ExerciciosOrientacaoObjetos.Exercicio02
         public string TemperaturaDestino;
         public double TemperaturaValor;
 
-        public void IdentificarTemperaturaOrigem()
+        public double IdentificarTemperaturaOrigem()
         {
-            var i = 1;
-            while (TemperaturaValor >= 0)
+
+            var resultadoTemperaturaconvertida = 0.0;
+
+
+            if ((TemperaturaOrigem == "celcius" || TemperaturaOrigem == "c") && (TemperaturaDestino == "kelvin" || TemperaturaDestino == "k"))
             {
-
-                    Console.WriteLine(i);
-                try
-                {
-                    Console.Write(@"Temperatura de Origem: ");
-                    TemperaturaOrigem = Console.ReadLine().Trim().ToLower();
-                    Console.Write("Temperatura de Destino: ");
-                    TemperaturaDestino = Console.ReadLine().Trim().ToLower();
-                    Console.Write("Temperatura Valor: ");
-                    TemperaturaValor = Convert.ToInt32(Console.ReadLine());
-
-
-                    if ((TemperaturaOrigem == "celcius" || TemperaturaOrigem == "c") && (TemperaturaDestino == "kelvin" || TemperaturaDestino == "k"))
-                    {
-                        Console.WriteLine(CalcularCelciusParaKelvin());
-                    }
-
-                    else if ((TemperaturaOrigem == "celcius" || TemperaturaOrigem == "c") && (TemperaturaDestino == "fahrenheit" || TemperaturaDestino == "f"))
-                    {
-                        Console.WriteLine(CalcularCelciusParaFahrenheit());
-                    }
-
-                    else if ((TemperaturaOrigem == "kelvin" || TemperaturaOrigem == "k") && (TemperaturaDestino == "celcius" || TemperaturaDestino == "c"))
-                    {
-                        Console.WriteLine(CalcularKelvinParaCelcius());
-                    }
-
-                    else if ((TemperaturaOrigem == "kelvin" || TemperaturaOrigem == "k") && (TemperaturaDestino == "fahrenheit" || TemperaturaDestino == "f"))
-                    {
-                        Console.WriteLine(CalcularKelvinParaFahrenheit());
-                    }
-
-                    else if ((TemperaturaOrigem == "fahrenheit" || TemperaturaOrigem == "f") && (TemperaturaDestino == "celcius" || TemperaturaDestino == "c"))
-                    {
-                        Console.WriteLine(CalcularFahrenheitParaCelcius());
-                    }
-
-                    else if ((TemperaturaOrigem == "fahrenheit" || TemperaturaOrigem == "f") && (TemperaturaDestino == "kelvin" || TemperaturaDestino == "k"))
-                    {
-                        Console.WriteLine(CalcularFahrenheitParaKelvin());
-                    }
-
-                    i++;
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Inválido!");
-                }
+               resultadoTemperaturaconvertida = CalcularCelciusParaKelvin();
             }
+
+            else if ((TemperaturaOrigem == "celcius" || TemperaturaOrigem == "c") && (TemperaturaDestino == "fahrenheit" || TemperaturaDestino == "f"))
+            {
+                resultadoTemperaturaconvertida = CalcularCelciusParaFahrenheit();
+            }
+
+            else if ((TemperaturaOrigem == "kelvin" || TemperaturaOrigem == "k") && (TemperaturaDestino == "celcius" || TemperaturaDestino == "c"))
+            {
+                resultadoTemperaturaconvertida = CalcularKelvinParaCelcius();
+            }
+
+            else if ((TemperaturaOrigem == "kelvin" || TemperaturaOrigem == "k") && (TemperaturaDestino == "fahrenheit" || TemperaturaDestino == "f"))
+            {
+                resultadoTemperaturaconvertida = CalcularKelvinParaFahrenheit();
+            }
+
+            else if ((TemperaturaOrigem == "fahrenheit" || TemperaturaOrigem == "f") && (TemperaturaDestino == "celcius" || TemperaturaDestino == "c"))
+            {
+                resultadoTemperaturaconvertida = CalcularFahrenheitParaCelcius();
+            }
+
+            else if ((TemperaturaOrigem == "fahrenheit" || TemperaturaOrigem == "f") && (TemperaturaDestino == "kelvin" || TemperaturaDestino == "k"))
+            {
+                resultadoTemperaturaconvertida = CalcularFahrenheitParaKelvin();
+            }
+
+            return resultadoTemperaturaconvertida;
+
         }
-        
-        public string CalcularCelciusParaKelvin()
+
+        public double CalcularCelciusParaKelvin()
         {
-            return "Temperatura Convertida: "+(TemperaturaValor + 273.15);
+            return TemperaturaValor + 273.15;
         }
-        public string CalcularCelciusParaFahrenheit()
+        public double CalcularCelciusParaFahrenheit()
         {
 
-            return "Temperatura Convertida: " + ((TemperaturaValor * 1.8) +32);
+            return (TemperaturaValor * 1.8) + 32;
         }
-        
-        public string CalcularKelvinParaCelcius()
+
+        public double CalcularKelvinParaCelcius()
         {
 
-            return "Temperatura Convertida: " + (TemperaturaValor - 273.15);
+            return TemperaturaValor - 273.15;
 
         }
-        public string CalcularKelvinParaFahrenheit()
+        public double CalcularKelvinParaFahrenheit()
         {
-            return "Temperatura Convertida: " + ((TemperaturaValor - 32) / 1.8 + 273.15);
+            return (TemperaturaValor - 32) / 1.8 + 273.15;
         }
 
-        public string CalcularFahrenheitParaCelcius()
-    {
-        
-            return "Temperatura Convertida: " + (TemperaturaValor - 32)/1.8;
-       
+        public double CalcularFahrenheitParaCelcius()
+        {
+
+            return (TemperaturaValor - 32) / 1.8;
+
+        }
+        public double CalcularFahrenheitParaKelvin()
+        {
+            return (TemperaturaValor - 32) / 1.8 + 273.15;
+        }
+
     }
-        public string CalcularFahrenheitParaKelvin()
-        {
-            return "Temperatura Convertida: " + ((TemperaturaValor /1.8)*(5/9)) + 273.15;
-        }
-
-}
 }
