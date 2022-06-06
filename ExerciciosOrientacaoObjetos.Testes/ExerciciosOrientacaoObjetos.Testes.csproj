@@ -17,8 +17,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Exercicio02\" />
-  </ItemGroup>
-
 </Project>
