@@ -61,7 +61,6 @@ namespace ExerciciosOrientacaoObjetos.Exercicio01
             var tempoPublicado = dataAtual.Year - DataLancamento.Year;
 
             return tempoPublicado;
-
         }
     }
 }
