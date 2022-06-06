@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ExerciciosOrientacaoObjetos.Exercicio02
 {
-    public class Temperatura
+    internal class Temperatura
     {
         public string TemperaturaOrigem;
         public string TemperaturaDestino;

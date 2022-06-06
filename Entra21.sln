@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Produto.Testes", "Produto.T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExerciciosOrientacaoObjetos", "ExerciciosOrientacaoObjetos\ExerciciosOrientacaoObjetos.csproj", "{2E2382C3-4117-4E8E-A7A0-2FFAFD8FE1CB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExerciciosOrientacaoObjetosTestes", "ExerciciosOrientacaoObjetos.Testes\ExerciciosOrientacaoObjetosTestes.csproj", "{F07F4AB6-5717-49CE-9379-7767B3A93212}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciciosOrientacaoObjetos.Testes", "ExerciciosOrientacaoObjetos.Testes\ExerciciosOrientacaoObjetos.Testes.csproj", "{F07F4AB6-5717-49CE-9379-7767B3A93212}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
