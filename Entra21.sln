@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExerciciosOrientacaoObjetos
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExerciciosOrientacaoObjetos.Testes", "ExerciciosOrientacaoObjetos.Testes\ExerciciosOrientacaoObjetos.Testes.csproj", "{F07F4AB6-5717-49CE-9379-7767B3A93212}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciciosListas", "ExerciciosListas\ExerciciosListas.csproj", "{42B11483-50E0-4BCB-BE4F-D12B23B65781}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{F07F4AB6-5717-49CE-9379-7767B3A93212}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F07F4AB6-5717-49CE-9379-7767B3A93212}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F07F4AB6-5717-49CE-9379-7767B3A93212}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42B11483-50E0-4BCB-BE4F-D12B23B65781}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42B11483-50E0-4BCB-BE4F-D12B23B65781}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42B11483-50E0-4BCB-BE4F-D12B23B65781}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42B11483-50E0-4BCB-BE4F-D12B23B65781}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace ExerciciosOrientacaoObjetos.Testes.Exercicio02
 {
-    internal class TemperaturaTeste
+
+    public class TemperaturaTeste
     {
+
     }
 }
