@@ -92,7 +92,7 @@
             for (int i = 0; i < produtos.Count; i++)
             {
                 // Obter o produto da listas de produtos em determinado indice
-                var produtoAtual = produtos[i];
+                Produto produtoAtual = produtos[i];
 
                 // Verifica se o produto atualda lista percorrida é o desejado
                 if (produtoAtual.Codigo == codigo)
