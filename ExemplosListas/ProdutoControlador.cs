@@ -16,7 +16,7 @@
                 Console.Clear();
 
                 if (codigo == 1)
-                {
+                {   
                     //Menu esvolhido´para listar produtos
                     ApresentarProdutos();
                 }
@@ -53,10 +53,10 @@
             Console.WriteLine("Digite o código do produto a ser detalahdo: ");
             int codigo = Convert.ToInt32(Console.ReadLine());
 
-            var produto = produtoServico.ObterPorCodigo(codigo);
+            Produto produto = produtoServico.ObterPorCodigo(codigo);
 
 
-            if (produto == null)
+            if (produto == null)    
             {
 
                 Console.WriteLine("Produto não cadastrado!");

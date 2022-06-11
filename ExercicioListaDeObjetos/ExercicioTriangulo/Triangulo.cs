@@ -2,15 +2,15 @@
 {
     internal class Triangulo
     {
-        public double lado1;
-        public double lado2;
-        public double lado3;
-        public int codigo;
+        public int Lado1;
+        public int Lado2;
+        public int Lado3;
+        public int Codigo;
 
         public bool ValidarTriangulo()
         {
             
-            if((lado1 + lado2)>lado3)
+            if((Lado1 + Lado2)>Lado3)
             {
                 return true;
             }
