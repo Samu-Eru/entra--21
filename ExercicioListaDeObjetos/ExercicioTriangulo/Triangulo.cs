@@ -7,10 +7,10 @@
         public int Lado3;
         public int Codigo;
 
-        public bool ValidarTriangulo()
+        public bool ValidarTriangulo(double lado1, double lado2, double lado3)
         {
             
-            if((Lado1 + Lado2)>Lado3)
+            if (((lado1 + lado2)>lado3) && ((lado1+lado3)>lado2) && ((lado2+lado3)>lado1))
             {
                 return true;
             }

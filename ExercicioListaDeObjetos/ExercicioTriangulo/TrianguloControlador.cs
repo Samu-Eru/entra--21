@@ -22,13 +22,17 @@ namespace ExercicioListaDeObjetos
                 {
                     Editar();
                 }
-                else if (codigo == 5)
+                else if(codigo == 3)
                 {
-                    ApresentarTrianguloPorCodigo();
+                    Apagar();
                 }
                 else if (codigo == 4)
                 {
                     ApresentarTriangulos();
+                }
+                else if (codigo == 5)
+                {
+                    ApresentarTrianguloPorCodigo();
                 }
             }
         }
@@ -108,7 +112,34 @@ namespace ExercicioListaDeObjetos
 
             trianguloServico.AdicionarTriangulo(lado1, lado2, lado3);
 
+            var adicionou = trianguloServico.AdicionarTriangulo(lado1,lado2,lado3);
 
+            if(adicionou == true)
+            {
+                Console.WriteLine("Triângulo adicionado com sucesso!");
+            }
+            else
+            {
+                Console.WriteLine("Valores digitados não podem formar um triângulo!");
+            }
+
+        }
+        private void Apagar()
+        {
+            ApresentarTriangulos();
+            Console.Write("Digite o c´doigo do triângulo que deseja apagar: ");
+            int codigoParaApagar = Convert.ToInt32(Console.ReadLine());
+
+            var codigoDeletado = trianguloServico.Apagar(codigoParaApagar);
+
+            if (codigoDeletado == true)
+            {
+                Console.WriteLine("Triangulo deletado com sucesso!");
+            }
+            else
+            {
+                Console.WriteLine("Código do Triangulo não existe! ");
+            }
 
         }
         private void ApresentarTriangulos()

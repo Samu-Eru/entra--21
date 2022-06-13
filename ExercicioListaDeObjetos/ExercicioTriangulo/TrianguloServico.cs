@@ -2,22 +2,33 @@
 {
     internal class TrianguloServico
     {
+        private Triangulo trianguloClasse = new Triangulo();
         private List<Triangulo> triangulos = new List<Triangulo>();
 
         private int codigoAtual = 1;
 
-        public void AdicionarTriangulo(int lado1, int lado2, int lado3)
+        public bool AdicionarTriangulo(int lado1, int lado2, int lado3)
         {
+            var trianguloPodeExistir = trianguloClasse.ValidarTriangulo(lado1, lado2, lado3);
             Triangulo triangulo = new Triangulo();
 
-            triangulo.Lado1 = lado1;
-            triangulo.Lado2 = lado2;
-            triangulo.Lado3 = lado3;
-            triangulo.Codigo = codigoAtual;
+            if (trianguloPodeExistir == true)
+            {
 
-            codigoAtual++;
+                triangulo.Lado1 = lado1;
+                triangulo.Lado2 = lado2;
+                triangulo.Lado3 = lado3;
+                triangulo.Codigo = codigoAtual;
 
-            triangulos.Add(triangulo);
+                codigoAtual++;
+
+                triangulos.Add(triangulo);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
 
         }
 
@@ -25,7 +36,7 @@
         {
             Triangulo trianguloParaAlterar = ObterPorCodigo(codigoParaAlterar);
 
-            if(trianguloParaAlterar == null)
+            if (trianguloParaAlterar == null)
             {
                 return false;
             }
@@ -37,22 +48,38 @@
         }
         public Triangulo ObterPorCodigo(int codigo)
         {
-            for(int i = 0;i< triangulos.Count;i++)
+            for (int i = 0; i < triangulos.Count; i++)
             {
                 Triangulo codigoAtual = triangulos[i];
 
-                if(codigoAtual.Codigo == codigo)
+                if (codigoAtual.Codigo == codigo)
                 {
                     return codigoAtual;
                 }
             }
 
-            return null; 
+            return null;
         }
 
         public bool EditarTriangulo(int codigoParaAlterar, int lado1, int lado2)
         {
             return true;
+        }
+
+        public bool Apagar(int codigo)
+        {
+            for (int i = 0; i < triangulos.Count; i++)
+            {
+                Triangulo trianguloAtual = triangulos[i];
+
+                if (trianguloAtual.Codigo == codigo)
+                {
+                    triangulos.Remove(trianguloAtual);
+                    return true;
+                }
+
+            }
+            return false;
         }
 
 

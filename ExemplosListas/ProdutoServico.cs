@@ -59,7 +59,7 @@
 
                 //Resgatando de uma lista de objetos
                 Produto produto = produtos[i];
-
+                    
                 if (produto.Codigo == codigo)
                 {
                     //posso rempover com o indoce do objeto desejado
