@@ -14,6 +14,7 @@
             triangulo.Lado2 = lado2;
             triangulo.Lado3 = lado3;
             triangulo.Codigo = codigoAtual;
+
             codigoAtual++;
 
             triangulos.Add(triangulo);
@@ -24,7 +25,7 @@
         {
             Triangulo trianguloParaAlterar = ObterPorCodigo(codigoParaAlterar);
 
-            if(codigoParaAlterar == null)
+            if(trianguloParaAlterar == null)
             {
                 return false;
             }

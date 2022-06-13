@@ -89,7 +89,7 @@ Total: {produto.CalcularPrecoTotal()}");
         {
             ApresentarProdutos();
 
-            Console.WriteLine("Códigp produto desejado: ");
+            Console.WriteLine("Código produto desejado: ");
             var codigo = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Nome: ");

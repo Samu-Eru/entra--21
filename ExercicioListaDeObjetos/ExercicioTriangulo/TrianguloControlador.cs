@@ -18,6 +18,10 @@ namespace ExercicioListaDeObjetos
                 {
                     Cadastrar();
                 }
+                else if (codigo == 2)
+                {
+                    Editar();
+                }
                 else if (codigo == 5)
                 {
                     ApresentarTrianguloPorCodigo();
@@ -40,6 +44,7 @@ namespace ExercicioListaDeObjetos
 
             return escolha;
         }
+
         private int SolicitarMenu()
         {
             int codigo = 0;
@@ -60,11 +65,34 @@ namespace ExercicioListaDeObjetos
          private void Editar()
         {
             ApresentarTriangulos();
+
             Console.WriteLine("Digite o código para ser editado: ");
-            int codigo = Convert.ToInt32(Console.ReadLine());
+            var codigo = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Digite um novo valor para o lado um: ");
+            var lado1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Digite um novo valor para o lado dois: ");
+            var lado2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Digite um novo valor para o lado três: ");
+            var lado3 = Convert.ToInt32(Console.ReadLine());
+
+            var codigoExiste = trianguloServico.EditarTriangulo(codigo,lado1,lado2,lado3);
+
+            if(codigoExiste == false)
+            {
+                Console.WriteLine("Código do triangulo não Existe!");
+                
+            }
+            else
+            {
+                Console.WriteLine("Triângulo alterado com sucesso!");
+            }
             
-            if()
-            
+
+
+
         }
             
         private void Cadastrar()
@@ -100,7 +128,7 @@ namespace ExercicioListaDeObjetos
         {
             ApresentarTriangulos();
 
-            Console.WriteLine("Digite o código do triangulo a ser detalahdo:");
+            Console.WriteLine("Digite o código do triangulo a ser detalhado:");
             int codigo = Convert.ToInt32(Console.ReadLine());
 
             Triangulo trianguloEscolhido = trianguloServico.ObterPorCodigo(codigo);

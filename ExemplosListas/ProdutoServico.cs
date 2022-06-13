@@ -5,7 +5,7 @@
         private List<Produto> produtos = new List<Produto>();
 
 
-        // Armazenar o códgio=go do próximo produto 
+        // Armazenar o código do próximo produto 
         private int codigoAtual = 1;
         public void Adicionar(string nome, double precoUnitario, ProdutoLocalizacao localizacao, int quantidade)
         {
@@ -145,7 +145,7 @@
             return precos;
         }
 
-        public List<double> ObterPrecosTotaisFiltrandoPorLocalizacao(ProdutoLocalizacao localizacao)
+        public List<double> ObterPrecosTotais(ProdutoLocalizacao localizacao)
         {
             var precos = new List<double>();
 
