@@ -63,6 +63,7 @@
 
         public bool EditarTriangulo(int codigoParaAlterar, int lado1, int lado2)
         {
+
             return true;
         }
 

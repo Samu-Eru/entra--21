@@ -1,4 +1,4 @@
-﻿using ExercicioListaDeObjetos.ExercicioTriangulo;
+﻿    using ExercicioListaDeObjetos.ExercicioTriangulo;
 
 namespace ExercicioListaDeObjetos
 {
