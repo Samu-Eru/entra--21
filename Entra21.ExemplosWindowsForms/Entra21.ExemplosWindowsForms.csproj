@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Exercícios\Entra21.ExerciciosListaObjetos\Entra21.ExerciciosListaObjetos.csproj" />
+    <ProjectReference Include="..\..\entra-21\Entra21.ExerciciosListaObjetos\Entra21.ExerciciosListaObjetos.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,8 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
         public EnderecoServico()
         {
             enderecos = new List<Endereco> { };
+
+            LerArquivo();
         }
 
         public void Adicionar(Endereco endereco)
@@ -91,7 +94,7 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
         public void SalvarArquivo()
         {
             var enderecosEmJson = JsonConvert.SerializeObject(enderecos);
-            File.writeAllText("enderecos.json", enderecosEmJson);
+            File.WriteAllText("enderecos.json", enderecosEmJson);
         }
 
         public void LerArquivo()

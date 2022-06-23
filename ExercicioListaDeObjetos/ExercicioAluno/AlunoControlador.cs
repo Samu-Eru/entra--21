@@ -15,7 +15,7 @@
 4 - alterar as notas de um aluno
 5 - Listas todos os alunos
 6 - Listas o nome de todos os alunos");
-            var 
+             
         }
     }
 }
