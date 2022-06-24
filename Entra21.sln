@@ -25,8 +25,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExemplosListas", "ExemplosL
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExercicioListaDeObjetos", "ExercicioListaDeObjetos\ExercicioListaDeObjetos.csproj", "{B2363D80-6E9F-4B6B-857A-E72BC0FD7B5E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExemplosWindowsForms", "Entra21.ExemplosWindowsForms\Entra21.ExemplosWindowsForms.csproj", "{16D94F7B-98EC-4A23-8132-3001363E3877}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,10 +75,6 @@ Global
 		{B2363D80-6E9F-4B6B-857A-E72BC0FD7B5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2363D80-6E9F-4B6B-857A-E72BC0FD7B5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2363D80-6E9F-4B6B-857A-E72BC0FD7B5E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{16D94F7B-98EC-4A23-8132-3001363E3877}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{16D94F7B-98EC-4A23-8132-3001363E3877}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{16D94F7B-98EC-4A23-8132-3001363E3877}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{16D94F7B-98EC-4A23-8132-3001363E3877}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
