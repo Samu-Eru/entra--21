@@ -91,3 +91,45 @@ SELECT id, titulo
 	OFFSET 4 ROWS FETCH NEXT 2 ROWS ONLY;
 
 
+-----------------------------Lista de Exercicios Insert -------------------------
+
+CREATE TABLE pessoas (
+	nome VARCHAR(100),
+	cpf varchar (14),
+	rg varchar (12),
+	data_nascimento DATETIME2,
+	idade INTEGER
+);
+
+INSERT INTO pessoas (nome, cpf,rg, data_nascimento, idade) Values ('Erick Brian Enrico Vierira', '699.734.958-70', '90.745.276-0',
+	'1989-05-28',29);
+
+INSERT INTO pessoas (nome,cpf, rg, data_nascimento, idade) VALUES ('Samuel Ruan Dias', '802.790.194-40', '55.318.691-71',
+	'1988-02-08', 29);
+
+INSERT INTO pessoas (nome, cpf, rg, data_nascimento, idade) VALUES ('Fábio benjamin Souza', '522.445.349-60', '54.715.232-2',
+	'1970-03-22', 48);
+
+INSERT INTO pessoas(nome, cpf, rg, data_nascimento, idade) VALUES ('Elias Miguel Aparicio', '293.928.821-65', '12.680.444-8',
+	'1986-06-07', 32);
+
+INSERT INTO pessoas (nome, cpf, rg, data_nascimetno, idade) VALUES ('Alexandre Gustavo Cardoso','617.408.878-24', '8.888.574-4',
+	'2003-04-15', 15);
+
+INSERT INTO pessoas (nome, cpf, data_nascimento, idade) VALUES ('Kaue lucca Duarte', '943.163.990-47', '46.977.509-9', 
+	'1968-06-15', 53);
+
+INSERT INTO pessoas (nome, cpf, data_nascimento, idade) VALUES ('Marcos Bryan Guilherme Mendes', '955.129.235-95', '84.050.077-41',
+	'2015-02-06', 3);
+
+INSERT INTO pessoas (nome,cpf, data_nascimento, idade) VALUES ('Benedito Pedro Carlos da Mota', '510.505.472-50', '43.588.124-3',
+	'1981-04-19', 37);
+
+INSERT INTO pessoas (nome, cpf, data_nascimento, idade) VALUES ('Luís Igor Barbosa', '370.570.311-06', '40.651.407-0', 
+	'2013-05-06', 5);
+
+
+SELECT nome, cpf, rg, data_nascimento, idade FROM pessoas
+
+
+
