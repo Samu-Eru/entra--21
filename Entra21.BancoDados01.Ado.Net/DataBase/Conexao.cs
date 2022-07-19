@@ -11,17 +11,17 @@ namespace Entra21.BancoDados01.Ado.Net.DataBase
     {
         public SqlConnection Conectar()
         {
-            //Instanciando um objeto da classe SQlConnection que permitirá fazer SELECTs, INSERTs, DELETEs, etc;
+            //Instanciado um objeto da classe SqlConnection, que permitirá
+            //Fazer selects, inserts, updates, deletes, etc...
             SqlConnection conexao = new SqlConnection();
 
-
-            // string que eontém o caminho para o banco de dados, o que permitirá conectar ao banco de dados
+            //String que contem o caminho para o banco de dados, o que permitira conectar ao bando de dados
             var connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=\\Server\c#-noturno\samuel.ribeiro\Desktop\ExemploBancoDados01AdoNet.mdf;Integrated Security=True;Connect Timeout=30";
 
             //Definir o caminho da conexão para o SqlConnection
             conexao.ConnectionString = connectionString;
 
-            // Abrir a conexão com o banco de dados
+            //Abrir a conexão com o banco de dados
             conexao.Open();
 
             return conexao;

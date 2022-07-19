@@ -27,7 +27,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExercicioListaDeObjetos", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExemploWindowsForms", "ExemploWindowsForms\ExemploWindowsForms.csproj", "{FB3E4A97-B8DE-45FD-B3B7-1B44F360FA63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.BancoDados01.Ado.Net", "Entra21.BancoDados01.Ado.Net\Entra21.BancoDados01.Ado.Net.csproj", "{013514C6-D3B4-4EEB-B1CF-B8BA6BCD09B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.BancoDados01.Ado.Net", "Entra21.BancoDados01.Ado.Net\Entra21.BancoDados01.Ado.Net.csproj", "{C78D2B9C-C714-457A-90EA-1E764066E12C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -83,10 +83,10 @@ Global
 		{FB3E4A97-B8DE-45FD-B3B7-1B44F360FA63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB3E4A97-B8DE-45FD-B3B7-1B44F360FA63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB3E4A97-B8DE-45FD-B3B7-1B44F360FA63}.Release|Any CPU.Build.0 = Release|Any CPU
-		{013514C6-D3B4-4EEB-B1CF-B8BA6BCD09B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{013514C6-D3B4-4EEB-B1CF-B8BA6BCD09B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{013514C6-D3B4-4EEB-B1CF-B8BA6BCD09B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{013514C6-D3B4-4EEB-B1CF-B8BA6BCD09B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C78D2B9C-C714-457A-90EA-1E764066E12C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C78D2B9C-C714-457A-90EA-1E764066E12C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C78D2B9C-C714-457A-90EA-1E764066E12C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C78D2B9C-C714-457A-90EA-1E764066E12C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

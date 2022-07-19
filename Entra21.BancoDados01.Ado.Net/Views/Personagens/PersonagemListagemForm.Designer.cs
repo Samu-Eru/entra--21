@@ -1,6 +1,6 @@
-﻿namespace Entra21.BancoDados01.Ado.Net.Views.TiposPersonagens
+﻿namespace Entra21.BancoDados01.Ado.Net.Views.Personagens
 {
-    partial class TipoPersonagemListagemForm
+    partial class PersonagemListagemForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,28 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonCadastrar = new System.Windows.Forms.Button();
+            this.buttonCadastro = new System.Windows.Forms.Button();
             this.buttonEditar = new System.Windows.Forms.Button();
             this.buttonApagar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTipoPersonagem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnEditora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // buttonCadastrar
+            // buttonCadastro
             // 
-            this.buttonCadastrar.Location = new System.Drawing.Point(679, 12);
-            this.buttonCadastrar.Name = "buttonCadastrar";
-            this.buttonCadastrar.Size = new System.Drawing.Size(75, 23);
-            this.buttonCadastrar.TabIndex = 0;
-            this.buttonCadastrar.Text = "Cadastrar";
-            this.buttonCadastrar.UseVisualStyleBackColor = true;
-            this.buttonCadastrar.Click += new System.EventHandler(this.buttonCadastrar_Click);
+            this.buttonCadastro.Location = new System.Drawing.Point(713, 12);
+            this.buttonCadastro.Name = "buttonCadastro";
+            this.buttonCadastro.Size = new System.Drawing.Size(75, 23);
+            this.buttonCadastro.TabIndex = 0;
+            this.buttonCadastro.Text = "Cadastro";
+            this.buttonCadastro.UseVisualStyleBackColor = true;
+            this.buttonCadastro.Click += new System.EventHandler(this.buttonCadastro_Click);
             // 
             // buttonEditar
             // 
-            this.buttonEditar.Location = new System.Drawing.Point(574, 12);
+            this.buttonEditar.Location = new System.Drawing.Point(632, 12);
             this.buttonEditar.Name = "buttonEditar";
             this.buttonEditar.Size = new System.Drawing.Size(75, 23);
             this.buttonEditar.TabIndex = 1;
@@ -59,7 +61,7 @@
             // 
             // buttonApagar
             // 
-            this.buttonApagar.Location = new System.Drawing.Point(465, 12);
+            this.buttonApagar.Location = new System.Drawing.Point(551, 12);
             this.buttonApagar.Name = "buttonApagar";
             this.buttonApagar.Size = new System.Drawing.Size(75, 23);
             this.buttonApagar.TabIndex = 2;
@@ -74,28 +76,42 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnId,
-            this.ColumnTipo});
-            this.dataGridView1.Location = new System.Drawing.Point(25, 41);
+            this.ColumnNome,
+            this.ColumnTipoPersonagem,
+            this.ColumnEditora});
+            this.dataGridView1.Location = new System.Drawing.Point(12, 41);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(747, 397);
+            this.dataGridView1.Size = new System.Drawing.Size(776, 397);
             this.dataGridView1.TabIndex = 3;
             // 
             // ColumnId
             // 
-            this.ColumnId.HeaderText = "ID";
+            this.ColumnId.HeaderText = "Código";
             this.ColumnId.Name = "ColumnId";
             this.ColumnId.ReadOnly = true;
             // 
-            // ColumnTipo
+            // ColumnNome
             // 
-            this.ColumnTipo.HeaderText = "Tipo";
-            this.ColumnTipo.Name = "ColumnTipo";
-            this.ColumnTipo.ReadOnly = true;
+            this.ColumnNome.HeaderText = "Nome";
+            this.ColumnNome.Name = "ColumnNome";
+            this.ColumnNome.ReadOnly = true;
             // 
-            // TipoPersonagemListagemForm
+            // ColumnTipoPersonagem
+            // 
+            this.ColumnTipoPersonagem.HeaderText = "Tipo Personagem";
+            this.ColumnTipoPersonagem.Name = "ColumnTipoPersonagem";
+            this.ColumnTipoPersonagem.ReadOnly = true;
+            // 
+            // ColumnEditora
+            // 
+            this.ColumnEditora.HeaderText = "Editora";
+            this.ColumnEditora.Name = "ColumnEditora";
+            this.ColumnEditora.ReadOnly = true;
+            // 
+            // PersonagemListagemForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -103,11 +119,10 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.buttonApagar);
             this.Controls.Add(this.buttonEditar);
-            this.Controls.Add(this.buttonCadastrar);
-            this.Name = "TipoPersonagemListagemForm";
+            this.Controls.Add(this.buttonCadastro);
+            this.Name = "PersonagemListagemForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Tipos de Personagens";
-            this.Load += new System.EventHandler(this.TipoPersonagemListagemForm_Load);
+            this.Text = "PersonagemListagemForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -115,11 +130,13 @@
 
         #endregion
 
-        private Button buttonCadastrar;
+        private Button buttonCadastro;
         private Button buttonEditar;
         private Button buttonApagar;
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn ColumnId;
-        private DataGridViewTextBoxColumn ColumnTipo;
+        private DataGridViewTextBoxColumn ColumnNome;
+        private DataGridViewTextBoxColumn ColumnTipoPersonagem;
+        private DataGridViewTextBoxColumn ColumnEditora;
     }
 }
