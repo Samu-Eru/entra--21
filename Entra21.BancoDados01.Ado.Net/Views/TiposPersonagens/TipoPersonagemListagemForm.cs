@@ -43,15 +43,8 @@ namespace Entra21.BancoDados01.Ado.Net.Views.TiposPersonagens
 
         private void AtualizarRegistrosDataGridView()
         {
-            // Obter todos os tipos de personagens cadastrados na tabela 
-            // tipos_personagens
             var tiposPersonagens = tipoPersonagemService.ObterTodos();
-
-            // removido todos os registros do dataGridView1
             dataGridView1.Rows.Clear();
-
-            // Percorrido todos os tipos de personagens encontrados para 
-            // adicionar no DataGridView permitindo o usuário visualiza-los
             for (int i = 0; i < tiposPersonagens.Count; i++)
             {
                 var tipoPersonagem = tiposPersonagens[i];
@@ -89,18 +82,12 @@ namespace Entra21.BancoDados01.Ado.Net.Views.TiposPersonagens
                 return;
             }
 
-            // Obter a linha selecionada
             var linhaSelecionada = dataGridView1.SelectedRows[0];
 
-            // Obter o id da linha selecionada
             var id = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
 
-            // Obter do banco de dados o tipo de personagem selecionado
             var tipoPersonagem = tipoPersonagemService.ObterPorId(id);
-
-            // Instanciado objeto do form para permitir edição passando o tipo personagem, que permitirá preencher os campos com os dados do Banco de Dados
             var tipoPersonagemForm = new TipoPersonagemCadastroEdicaoForm(tipoPersonagem);
-            // Apresentado o form para o usuário
             tipoPersonagemForm.ShowDialog();
 
             AtualizarRegistrosDataGridView();

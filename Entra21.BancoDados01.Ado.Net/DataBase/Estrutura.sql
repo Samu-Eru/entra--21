@@ -21,23 +21,20 @@ nome VARCHAR(50),
 FOREIGN KEY (id_editora) REFERENCES editoras(id),
 FOREIGN KEY (id_tipo_personagem) REFERENCES tipos_personagens(id));
 
-CREATE TABLE unidades_federativas(
+CREATE TABLE unidade_federativa ( 
 id INTEGER PRIMARY KEY IDENTITY(1,1),
 nome VARCHAR (50),
 sigla VARCHAR (2));
 
-CREATE TABLE cidades(
-id INTEGER PRIMARY KEY IDENTITY (1,1),
+CREATE TABLE cidades (
+id INTEGER PRIMARY KEY IDENTITY(1,1),
 id_unidade_federativa INTEGER,
 nome VARCHAR (50),
 quantidade_habitantes INTEGER,
-data_hora_habitantes DATETIME2,
-pib DECIMAL (7,2)
+data_hora_fundacao DateTime2,
+pib DECIMAL (13,2)
 
-FOREIGN KEY (id_unidade_federativa) REFERENCES unidades_federativas(id));
+FOREIGN KEY (id_unidade_federativa) REFERENCES unidade_federativa(id)
+);
 
-//-----------------------------------------
-//alter table cidades add data_hora_criacao;DATETIME2;
-
-SELECT *FROM cidades
-DROP TABLE cidades
+INSERT INTO unidade_federativa (nome,sigla) VALUES ('paraná','PR')

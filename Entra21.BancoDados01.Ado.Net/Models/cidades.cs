@@ -11,6 +11,9 @@ namespace Entra21.BancoDados01.Ado.Net.Models
         public int id { get; set; }
         public string nome { get; set; }
         public int quantidade_habitantes { get; set; }
-        public DateTime 
+        public DateTime data_hora_fundacao { get; set; }
+
+        //lembrar do inner join
+        public unidades_federativas id_unidade_federativa  { get; set; }
     }
 }

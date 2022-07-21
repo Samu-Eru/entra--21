@@ -16,7 +16,7 @@ namespace Entra21.BancoDados01.Ado.Net.DataBase
             SqlConnection conexao = new SqlConnection();
 
             //String que contem o caminho para o banco de dados, o que permitira conectar ao bando de dados
-            var connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=\\Server\c#-noturno\samuel.ribeiro\Desktop\ExemploBancoDados01AdoNet.mdf;Integrated Security=True;Connect Timeout=30";
+            var connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Gabriele\Desktop\ExemploBancoDados01AdoNet.mdf;Integrated Security=True;Connect Timeout=30";
 
             //Definir o caminho da conexão para o SqlConnection
             conexao.ConnectionString = connectionString;
